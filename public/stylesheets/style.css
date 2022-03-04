@@ -18,7 +18,7 @@ html {
 
 body {
   background-color: gray;
-  /* Use a system font, if none are available use an available sans-sarif font */
+  --section-background-color: white;
   font-family: "Fredoka", sans-serif;
   margin: 0;
 }

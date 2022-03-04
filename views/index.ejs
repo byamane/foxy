@@ -1,10 +1,26 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
-<link rel="stylesheet" href="../public/stylesheets/index.css">
+<link rel="stylesheet" href="/stylesheets/index.css">
 
 <main>
-  <!-- <h1>hello, <%#= user ? user.profile.name : "friend" %></h1> -->
+  <h1>Foxy <img id="fox-heading" src="/images/logo/FoxIcon.png" alt="Fox"></h1>
   
+  <section id="intro">
+    <h2>Why this application exists</h2>
+    <div id="intro-body">
+      This is a video game collection & review site that showcases your love of gaming to the world! This web app was created using a MEN stack alongside Google OAuthentication.
+    </div>
+    <button id="log-in">
+      <a 
+        href="/auth/google" 
+        class="siwg-link"
+      ></a>
+        Log In
+    </button>
+  </section>
+    <%#= user ? user.profile.name : "friend" %>
+
+
 </main>
 
 <%- include('./partials/footer') %>

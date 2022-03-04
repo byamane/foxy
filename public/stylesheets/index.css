@@ -1,0 +1,35 @@
+h1 {
+  font-size: 8rem;
+}
+
+section {
+  width: 40vw;
+  height: 40vh;
+  background-color: var(--section-background-color);
+  border: 2px solid black;
+  text-align: center;
+  padding: 0 20px 10px 20px;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+img {
+  height: 3.6rem;
+
+}
+
+#fox-heading {
+  height: 6rem;
+}
+
+#intro-body{
+  font-size: 1.5rem;
+}
+
+#log-in {
+  height: 5vh;
+  width: 10vw;
+  margin-top: 20px;
+}
