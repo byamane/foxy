@@ -13,13 +13,14 @@ router.get('/:id', isLoggedIn, gamesCtrl.show)
 // GET - localhost:3000/games/:id/edit
 router.get('/:id/edit', isLoggedIn, gamesCtrl.edit)
 
-
-
 // POST - localhost:3000/games
 router.post('/', isLoggedIn, gamesCtrl.create)
 
 // PUT - localhost:3000/games/:id
-router.put("/:id", isLoggedIn, gamesCtrl.update)
+router.put('/:id', isLoggedIn, gamesCtrl.update)
+
+// DELETE - localhost:3000/games
+router.delete('/:id', isLoggedIn, gamesCtrl.delete)
 
 
 export {
