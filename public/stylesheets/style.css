@@ -50,6 +50,10 @@ main {
   flex-direction: column;
 }
 
+img {
+  height: 3.6rem;
+}
+
 #profile-icon {
   border: 2px solid var(--profile-border-color);
   border-radius: 50px;
