@@ -63,6 +63,24 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  console.log(req.params.id)
+  Game.findById(req.params.id)
+  .then(game => {
+    if (game.addedBy.equals(req.user.profile._id)) {
+      game.updateOne(req.body, {new: true})
+      .then(() => {
+        res.redirect(`/games/${req.params.id}`)
+      })
+    } else {
+      throw new Error("NOT AUTHORIZED")
+    }
+  })
+  .catch(err => {
+    console.log("the error:", err)
+    res.redirect("/games")
+  })
+}
 
 
 
@@ -72,5 +90,5 @@ export {
   create,
   show,
   edit,
-
+  update,
 }

@@ -18,8 +18,8 @@ router.get('/:id/edit', isLoggedIn, gamesCtrl.edit)
 // POST - localhost:3000/games
 router.post('/', isLoggedIn, gamesCtrl.create)
 
-// // PUT - localhost:3000/games/:id
-// router.put("/:id", isLoggedIn, gamesCtrl.update)
+// PUT - localhost:3000/games/:id
+router.put("/:id", isLoggedIn, gamesCtrl.update)
 
 
 export {
