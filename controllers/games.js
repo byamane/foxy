@@ -14,7 +14,21 @@ function index(req, res) {
   })
 }
 
+function newGame(req, res) {
+  res.render('games/new', {
+    title: "Add Game"
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/games")
+  })
+}
+
+
+
 export {
   index,
+  newGame as new,
+
   
 }
