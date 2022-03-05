@@ -21,6 +21,13 @@
     <div><%= game.esrbRating %></div>
     <div>Release Year: </div>
     <div><%= game.releaseYear %></div>
+
+  <% if (user) { %>
+    <button>
+      <a href="/reviews"></a>
+    </button>
+
+  <% } %>
 </section>
 
 
