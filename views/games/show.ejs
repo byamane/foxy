@@ -3,6 +3,15 @@
 <link rel="stylesheet" href="/stylesheets/games/show.css">
 
 <section>
+  <% if (game.addedBy.equals(user?.profile._id)) { %>
+    <form action="/games/<%= game._id %>/edit" method="GET">
+      <button class="btn" type="submit">Edit <%= game.name %> Details</button>
+    </form>
+    <!-- <form action="/tacos/<#%= taco._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete this Taco</button>
+    </form> -->
+  <% } %>
+
   <h2>Added by <%= game.addedBy.name %></h2>
   <div>Name: </div>
     <div><%= game.name %></div>

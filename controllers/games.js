@@ -49,6 +49,21 @@ function show(req, res){
   })
 }
 
+function edit(req, res) {
+  Game.findById(req.params.id)
+  .then(game => {
+    res.render("games/edit", {
+      game,
+      title: "Edit Game"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/games")
+  })
+}
+
+
 
 
 export {
@@ -56,5 +71,6 @@ export {
   newGame as new,
   create,
   show,
+  edit,
 
 }
