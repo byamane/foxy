@@ -7,9 +7,9 @@
     <form action="/games/<%= game._id %>/edit" method="GET">
       <button class="btn" type="submit">Edit <%= game.name %> Details</button>
     </form>
-    <!-- <form action="/tacos/<#%= taco._id %>?_method=DELETE" method="POST">
-      <button class="btn" type="submit">Delete this Taco</button>
-    </form> -->
+    <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete <%= game.name %> </button>
+    </form>
   <% } %>
 
   <h2>Added by <%= game.addedBy.name %></h2>

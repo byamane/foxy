@@ -37,7 +37,6 @@ function show(req, res){
   Game.findById(req.params.id)
   .populate("addedBy")
   .then(game => {
-    console.log(game)
     res.render('games/show', {
       game,
       title: `${game.name}`
@@ -64,7 +63,6 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  console.log(req.params.id)
   Game.findById(req.params.id)
   .then(game => {
     if (game.addedBy.equals(req.user.profile._id)) {
@@ -82,6 +80,24 @@ function update(req, res) {
   })
 }
 
+function deleteGame(req, res){
+  Game.findById(req.params.id)
+  .then(game => {
+    if (game.addedBy.equals(req.user.profile._id)) {
+      game.delete()
+      .then(() => {
+        res.redirect("/games")
+      })
+    } else {
+      throw new Error ("NOT AUTHORIZED")
+    }
+  })
+  .catch(err => {
+    console.log("the error:", err)
+    res.redirect("/games")
+  })
+}
+
 
 
 export {
@@ -91,4 +107,5 @@ export {
   show,
   edit,
   update,
+  deleteGame as delete,
 }
