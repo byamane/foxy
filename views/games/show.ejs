@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/games/show.css">
+
+<section>
+  <h2>Added by <%= game.addedBy.name %></h2>
+  <div>Name: </div>
+    <div><%= game.name %></div>
+    <div>Genre: </div>
+    <div><%= game.genre %></div>
+    <div>ESRB Rating: </div>
+    <div><%= game.esrbRating %></div>
+    <div>Release Year: </div>
+    <div><%= game.releaseYear %></div>
+</section>
+
+
+
+
+
+<%- include('../partials/footer') %>

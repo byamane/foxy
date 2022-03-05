@@ -9,7 +9,7 @@
     <ul>
       <% games.forEach(game => { %>
         <div id="games-layout">
-          <%= game.name %>
+          <a href="/games/<%= game._id %>"><%= game.name %></a> 
           <!-- <%#= game.releaseYear %>  -->
         </div>
           <% }) %>
