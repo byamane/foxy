@@ -3,24 +3,38 @@
 <link rel="stylesheet" href="/stylesheets/index.css">
 
 <main>
-  <h1>Foxy <img id="fox-heading" src="/images/logo/FoxIcon.png" alt="Fox"></h1>
-  
+  <div id="heading">
+    <h1>Foxy</h1>
+    <img id="fox-heading" src="/images/logo/FoxIcon.png" alt="Fox">
+  </div>
+
   <section id="intro">
     <h2>Why this application exists</h2>
     <div id="intro-body">
-      This is a video game collection & review site that showcases your love of gaming to the world! This web app was created using a MEN stack alongside Google OAuthentication.
+      Hello gamer!<br>
+      <br>
+      This is a video game collection & review site that showcases your love of gaming to your friends & the world! <br>
+      <br>
+      My inspiration for this project tracks far back into my life as a gamer. But most recently -- before entering the world of software engineering -- I played FIFA at the professional level for the Major League Soccer club, Minnesota United FC. Alongside this, I was a full-time streamer & content creator.<br>
+      <br>
+      Safe to say, video games have been a big part of life in many capacities. My personal goal for this project was to create a place where gamers like myself could share their love of games together!<br>
+      <br>
+      To get started, click on either the <em>Log In</em> button below or the <em>Sign in with Google</em> button at the top!<br>
+      <br>
+      <% if (user) { %>
+        <a href="/auth/logout">
+          <button id="log-out" type="submit">Logout</button>
+        </a>
+      <% } else { %>
+        <a href="/auth/google">
+          <button type="submit" id="log-in">
+            Log In
+          </button>
+        </a>
+      <% } %>
+      <h5>This web app was created using a MEN stack alongside Google OAuth.</h5> 
     </div>
-    <button id="log-in">
-      <a 
-        href="/auth/google" 
-        class="siwg-link"
-      ></a>
-        Log In
-    </button>
   </section>
-    <%#= user ? user.profile.name : "friend" %>
-
-
 </main>
 
 <%- include('./partials/footer') %>

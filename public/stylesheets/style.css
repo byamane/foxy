@@ -17,10 +17,23 @@ html {
 }
 
 body {
-  background-color: gray;
-  --section-background-color: white;
+  --bg-color: #5f6d7a;
+  --section-bg-color: white;
+
+  --log-in-bg-color: rgb(255, 102, 0);
+  --log-in-color: black;
+  --log-in-hover-bg-color: rgb(255, 122, 0);
+  --log-in-hover-color: black;
+  --log-out-bg-color: #5f6d7a;
+  --log-out-color: white;
+  --log-out-hover-bg-color: #738494;
+  --log-out-hover-color: white;
+
+  --profile-border-color: rgb(255, 102, 0);
+
   font-family: "Fredoka", sans-serif;
   margin: 0;
+  background-color: var(--bg-color);
 }
 
 nav {
@@ -37,12 +50,8 @@ main {
   flex-direction: column;
 }
 
-h1 {
-  font-size: 3.6rem;
-}
-
 #profile-icon {
-  border: 2px solid rgb(255, 174, 0);
+  border: 2px solid var(--profile-border-color);
   border-radius: 50px;
   justify-self: center;
   margin-top: .2rem;

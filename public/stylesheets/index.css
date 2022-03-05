@@ -1,11 +1,16 @@
+img {
+  height: 3.6rem;
+}
+
 h1 {
-  font-size: 8rem;
+  font-size: 10rem;
+  margin: 0;
 }
 
 section {
   width: 40vw;
-  height: 40vh;
-  background-color: var(--section-background-color);
+  height: 50vh;
+  background-color: var(--section-bg-color);
   border: 2px solid black;
   text-align: center;
   padding: 0 20px 10px 20px;
@@ -15,13 +20,17 @@ h2 {
   font-size: 4rem;
 }
 
-img {
-  height: 3.6rem;
-
+#heading {
+  margin: 80px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #fox-heading {
-  height: 6rem;
+  height: 10rem;
+  width: 10rem;
+  margin-left: 20px;
 }
 
 #intro-body{
@@ -31,5 +40,35 @@ img {
 #log-in {
   height: 5vh;
   width: 10vw;
-  margin-top: 20px;
+  margin-top: 5px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 2rem;
+  background-color: var(--log-in-bg-color);
+  color: var(--log-in-color);
+  border-radius: 3px;
+  font-weight: 800;
+}
+
+#log-in:hover {
+  background-color: var(--log-in-hover-bg-color);
+  color: var(--log-in-hover-color);
+  cursor: pointer;
+}
+
+#log-out {
+  height: 5vh;
+  width: 10vw;
+  margin-top: 5px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 2rem;
+  background-color: var(--log-out-bg-color);
+  color: var(--log-out-color);
+  border-radius: 3px;
+  font-weight: 800;
+}
+
+#log-out:hover {
+  background-color: var(--log-out-hover-bg-color);
+  color: var(--log-out-hover-color);
+  cursor: pointer;
 }
