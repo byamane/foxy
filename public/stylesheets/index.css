@@ -72,3 +72,51 @@ h2 {
   color: var(--log-out-hover-color);
   cursor: pointer;
 }
+
+@media only screen and (max-width: 768px){
+  h1 {
+    font-size: 5rem;
+  }
+
+  section {
+    width: 80vw;
+    height: 67.5vh;
+    background-color: var(--section-bg-color);
+    border: 2px solid black;
+    text-align: center;
+    padding: 0 20px 10px 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  #heading {
+    margin: 35px 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #fox-heading {
+    height: 5rem;
+    width: 5rem;
+    margin-left: 10px;
+  }
+
+  #intro-body{
+    font-size: 1.1rem;
+  }
+
+  #log-in {
+    height: 5vh;
+    width: 20vw;
+    font-size: 1.5rem;
+  }
+
+  #log-out {
+    height: 5vh;
+    width: 20vw;
+    font-size: 1.5rem;
+  }
+}
