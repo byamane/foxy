@@ -98,6 +98,16 @@ function deleteGame(req, res){
   })
 }
 
+function newReview(req, res){
+  Game.findById(req.params.id)
+  .then(game => {
+    res.render(`games/reviews`, {
+      title: "Add Review",
+      game
+    })
+  })
+}
+
 
 
 export {
@@ -108,4 +118,5 @@ export {
   edit,
   update,
   deleteGame as delete,
+  newReview,
 }
