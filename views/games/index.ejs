@@ -6,12 +6,12 @@
   <h1><%= title %></h1>
   
   <section>
-      <% games.forEach(game => { %>
-        <div id="games-layout">
-          <a href="/games/<%= game._id %>"><%= game.name %></a> 
-          <!-- <%#= game.releaseYear %>  -->
-        </div>
-          <% }) %>
+    <% games.forEach(game => { %>
+      <div id="games-layout">
+        <a href="/games/<%= game._id %>"><%= game.name %></a> 
+        <!-- <%#= game.releaseYear %>  -->
+      </div>
+        <% }) %>
   </section>
 
 </main>

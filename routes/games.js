@@ -14,6 +14,8 @@ router.get('/:id', isLoggedIn, gamesCtrl.show)
 router.get('/:id/edit', isLoggedIn, gamesCtrl.edit)
 // GET - localhost:3000/reviews
 router.get('/:id/reviews', isLoggedIn, gamesCtrl.newReview)
+// GET - localhost:3000/reviews
+router.get('/reviews/:id', isLoggedIn, gamesCtrl.editReview)
 
 // POST - localhost:3000/games
 router.post('/', isLoggedIn, gamesCtrl.create)

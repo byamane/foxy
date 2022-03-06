@@ -1,5 +1,6 @@
 import { Game } from "../models/game.js"
 
+
 function index(req, res) {
   Game.find({})
   .then(games => {
@@ -111,10 +112,26 @@ function newReview(req, res){
 function createReview(req, res){
   Game.findById(req.params.id) 
   .then(game => {
+    req.body.addedBy = req.user.profile._id
+    req.body.author = req.user.profile.name
     game.reviews.push(req.body)
     game.save(function(err) {
       res.redirect(`/games/${game._id}`)
     })
+  })
+}
+
+function editReview(req, res) {
+  Game.findById(req.params.id)
+  .then(game => {
+    res.render("games/edit", {
+      game,
+      title: "Edit Game"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/games")
   })
 }
 
@@ -129,4 +146,5 @@ export {
   deleteGame as delete,
   newReview,
   createReview,
+  editReview,
 }

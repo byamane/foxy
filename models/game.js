@@ -10,7 +10,7 @@ const reviewSchema = new Schema ({
     required: true
   },
   content: {type: String, required: true},
-  addedBy: {type: Schema.Types.ObjectId, ref: "Profile"},
+  addedBy: {type: Schema.Types.ObjectId, ref: "Profile"}
 }, {
   timestamps: true,
 })
@@ -25,10 +25,8 @@ const gameSchema = new Schema ({
   reviews: [reviewSchema],
 })
 
-const Review = mongoose.model("Review", reviewSchema)
 const Game = mongoose.model("Game", gameSchema)
 
 export {
-  Game,
-  Review
+  Game
 }

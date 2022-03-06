@@ -2,26 +2,15 @@
 <%- include('../partials/nav') %>
 <link rel="stylesheet" href="/stylesheets/games/show.css">
 
-<section>
+<section id="user-options">
   <% if (game.addedBy.equals(user?.profile._id)) { %>
     <form action="/games/<%= game._id %>/edit" method="GET">
-      <button class="btn" type="submit">Edit <%= game.name %> Details</button>
+      <button class="btn" type="submit">Edit <%= game.name %></button>
     </form>
     <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
       <button class="btn" type="submit">Delete <%= game.name %> </button>
     </form>
   <% } %>
-
-  <h2>Added by <%= game.addedBy.name %></h2>
-  <div>Name: </div>
-    <div><%= game.name %></div>
-    <div>Genre: </div>
-    <div><%= game.genre %></div>
-    <div>ESRB Rating: </div>
-    <div><%= game.esrbRating %></div>
-    <div>Release Year: </div>
-    <div><%= game.releaseYear %></div>
-
   <% if (user) { %>
     <button>
       <a href="/games/<%= game._id %>/reviews">
@@ -31,8 +20,42 @@
   <% } %>
 </section>
 
+<section id="details-section">
+  <h2>Added by <%= game.addedBy.name %></h2>
+  <div>Name: </div>
+    <div><%= game.name %></div>
+    <div>Genre: </div>
+    <div><%= game.genre %></div>
+    <div>ESRB Rating: </div>
+    <div><%= game.esrbRating %></div>
+    <div>Release Year: </div>
+    <div><%= game.releaseYear %></div>
+</section>
 
-
-
+<section id="reviews-section">
+    <% if (game.reviews.length) { %>
+          <% let total = 0 %> 
+          <% game.reviews.forEach(review => { %>
+            <% total += review.rating %> 
+            <div><%= review.content %></div>
+            <div><%= review.addedBy %> - <%= review.rating %>/10
+              <br>
+              <%= review.createdAt.toLocaleDateString() %></div>
+              <br>
+              <% console.log(review.addedBy) %> 
+              <% if (review.addedBy.equals(user?.profile._id)) { %>
+                <form action="/games/<%= game._id %>/reviews/<%= review._id %>/edit" method="GET">
+                  <button class="btn" type="submit">Edit Review</button>
+                </form>
+                <form action="/games/<%= game._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                  <button class="btn" type="submit">Delete Review</button>
+                </form>
+              <% } %>
+          <% }) %>
+              <strong><%= (total / game.reviews.length).toFixed(1) %></strong>
+    <% } else { %>
+      <h3>No Reviews Yet</h3>
+    <% } %> 
+</section>
 
 <%- include('../partials/footer') %>

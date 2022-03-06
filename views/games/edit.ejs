@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="/stylesheets/games/show.css">
 
 <section>
-  <h1>Edit <%= game.name %> Details</h1>
+  <h1>Edit <%= game.name %></h1>
   <% if (user) { %>
     <form action="/games/<%= game._id %>?_method=PUT" method="POST">
       <label>Name:
