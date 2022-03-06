@@ -17,6 +17,8 @@ router.get('/:id/reviews', isLoggedIn, gamesCtrl.newReview)
 
 // POST - localhost:3000/games
 router.post('/', isLoggedIn, gamesCtrl.create)
+// POST - localhost:3000/games/:id
+router.post('/:id', isLoggedIn, gamesCtrl.createReview)
 
 // PUT - localhost:3000/games/:id
 router.put('/:id', isLoggedIn, gamesCtrl.update)

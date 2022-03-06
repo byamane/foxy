@@ -22,7 +22,7 @@ const gameSchema = new Schema ({
   releaseYear: {type: Number, min: 1958, max: 2022, required: true},
   coverImage: {type: String, required: true},
   addedBy: {type: Schema.Types.ObjectId, ref: "Profile"},
-  reviews: [{type: Schema.Types.ObjectId, ref: "Reviews" }],
+  reviews: [reviewSchema],
 })
 
 const Review = mongoose.model("Review", reviewSchema)
