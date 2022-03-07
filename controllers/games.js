@@ -1,4 +1,5 @@
 import { Game } from "../models/game.js"
+import fetch from "node-fetch"
 
 
 function index(req, res) {

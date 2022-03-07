@@ -1,36 +1,51 @@
   <% if (!user) { %>
     <link rel="stylesheet" href="/stylesheets/siwg.css">
   <% } %>
+  <link rel="stylesheet" href="/stylesheets/nav.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <nav>
+  <nav class="navbar">
     <a href="/">
       <img 
-        class="fox" 
-        src="/images/logo/FoxIcon.png" 
-        alt="Fox"
+      class="fox-nav" 
+      src="/images/logo/FoxIcon.png" 
+      alt="Fox"
       >
     </a>
-    <a href="/games">All Games</a>
-    <a href="/games/new">Add Game</a>
-    <% if (user?.profile.avatar) { %>
-      <div>
-        <img
-          id = "profile-icon"
-          src="<%= user.profile.avatar %>"
-          alt="<%= user.profile.name %> avatar"
-        />
+    <!-- <div class="project-name">Foxy</div> -->
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+        <ul>
+          <li><a href="/games">All Games</a></li>
+          <li><a href="/games/new">Add Game</a></li>
+          <li><a href="/profiles">All Users</a></li>
+            <% if (user?.profile.avatar) { %>
+              <li>
+                <img
+                  id = "profile-icon"
+                  src="<%= user.profile.avatar %>"
+                  alt="<%= user.profile.name %> avatar"
+                />
+              </li>
+            <% } %>
+            <% if (user) { %>
+              <!-- <li> 
+                <a href="/auth/logout">
+                  <button id="logout" type="submit">Logout</button>
+                </a>
+              </li> -->
+            <% } else { %>
+              <a href="/auth/google" class="siwg-link">
+                <button type="submit" class="siwg">
+                  <img id="siwg-image" alt="Sign in with Google" />
+                </button>
+              </a>
+            <% } %>
+        </ul>
       </div>
-    <% } %>
-    <% if (user) { %>
-      <a href="/auth/logout">
-        <button id="logout" type="submit">Logout</button>
-      </a>
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
   </nav>
