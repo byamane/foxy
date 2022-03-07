@@ -113,7 +113,6 @@ function createReview(req, res){
   Game.findById(req.params.id) 
   .then(game => {
     req.body.addedBy = req.user.profile._id
-    req.body.author = req.user.profile.name
     game.reviews.push(req.body)
     game.save(function(err) {
       res.redirect(`/games/${game._id}`)
@@ -122,16 +121,25 @@ function createReview(req, res){
 }
 
 function editReview(req, res) {
-  Game.findById(req.params.id)
-  .then(game => {
-    res.render("games/edit", {
-      game,
-      title: "Edit Game"
+  Game.review.findById(req.params.id)
+  .then(review => {
+    res.render("games/editReview", {
+      review,
+      title: "Edit Review"
     })
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/games")
+  })
+}
+
+
+function deleteReview(req, res){
+  Game.findById(req.params.id, (error, game) => {
+    game.reviews.id(req.params.rid).remove()
+    game.save(err => {
+      res.redirect(`/games/${req.params.id}`)
+    })
   })
 }
 
@@ -147,4 +155,5 @@ export {
   newReview,
   createReview,
   editReview,
+  deleteReview,
 }

@@ -1,0 +1,34 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/reviews/new.css">
+
+<main>
+	<h1>Edit Review</h1>
+  <h2><%= game.name %></h2>
+
+  <% if (user) { %>
+    <form 
+      id="add-review-form" 
+      action="/games/<%= game._id %>" 
+      method="post"
+    >
+    <label for="rating-select">Rating:</label>
+    <select name="rating" id="rating-select">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10" selected>10</option>
+    </select>
+    <label for="content-textarea">Review:</label>
+    <textarea name="content" id="content-textarea"></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+  <% } %>
+  
+<%- include('../partials/footer') %>

@@ -15,8 +15,8 @@ router.get('/:id/edit', isLoggedIn, gamesCtrl.edit)
 // GET - localhost:3000/reviews
 router.get('/:id/reviews', isLoggedIn, gamesCtrl.newReview)
 // GET - localhost:3000/reviews
-router.get('/reviews/:id', isLoggedIn, gamesCtrl.editReview)
-
+router.get('/:id', isLoggedIn, gamesCtrl.editReview)
+ 
 // POST - localhost:3000/games
 router.post('/', isLoggedIn, gamesCtrl.create)
 // POST - localhost:3000/games/:id
@@ -27,6 +27,8 @@ router.put('/:id', isLoggedIn, gamesCtrl.update)
 
 // DELETE - localhost:3000/games
 router.delete('/:id', isLoggedIn, gamesCtrl.delete)
+// DELETE - localhost:3000/games/:id/reviews/:rid
+router.delete('/:id/reviews/:rid', isLoggedIn, gamesCtrl.deleteReview)
 
 
 export {
