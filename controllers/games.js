@@ -37,6 +37,7 @@ function create(req, res){
 function show(req, res){
   Game.findById(req.params.id)
   .populate("addedBy")
+  .populate("reviews.addedBy")
   .then(game => {
     res.render('games/show', {
       game,
@@ -120,18 +121,21 @@ function createReview(req, res){
   })
 }
 
-function editReview(req, res) {
-  Game.review.findById(req.params.id)
-  .then(review => {
-    res.render("games/editReview", {
-      review,
-      title: "Edit Review"
-    })
-  })
-  .catch(err => {
-    console.log(err)
-  })
-}
+// function editReview(req, res) {
+//   Game.findById(req.params.id, (error, game) => {
+//     game.reviews.findById(req.params.id, (error, review) => {
+//       console.log(req.params.rid)
+//       res.render("games/editReview", {
+//         game,
+//         review,
+//         title: "Edit Review"
+//       })
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//   })
+// }
 
 
 function deleteReview(req, res){
@@ -154,6 +158,6 @@ export {
   deleteGame as delete,
   newReview,
   createReview,
-  editReview,
+  // editReview,
   deleteReview,
 }

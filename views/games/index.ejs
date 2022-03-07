@@ -5,10 +5,27 @@
 <main>
   <h1><%= title %></h1>
   
-  <section>
+  <section class="card-container">
     <% games.forEach(game => { %>
-      <div id="games-layout">
-        <a href="/games/<%= game._id %>"><%= game.name %></a> 
+      <div class="card-base" id="games-layout">
+        <a href="/games/<%= game._id %>">
+          <img class="game-bg"
+            src="/images/GoT.jpg" 
+            alt="game-background"
+            width="350"
+            height="300"
+          >       
+        </a>
+        <a class="btn-link" href="/games/<%= game._id %>">
+          <button class="btn-base">
+            <%= game.name %> 
+          </button>
+          <div class="content">
+            This is some placeholder text where I'll put other game info inside
+          </div>
+        </a>
+        
+          <%#= game.name %> 
         <!-- <%#= game.releaseYear %>  -->
       </div>
         <% }) %>

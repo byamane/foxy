@@ -38,16 +38,15 @@
           <% game.reviews.forEach(review => { %>
             <% total += review.rating %> 
             <div><%= review.content %></div>
-            <div><%= review.addedBy %> - <%= review.rating %>/10
+            <div><%= review.addedBy.name %> - <%= review.rating %>/10
               <br>
               <%= review.createdAt.toLocaleDateString() %></div>
               <br>
-              <% console.log(review.addedBy) %>
 
               <% if (review.addedBy.equals(user?.profile._id)) { %>
-                <form action="/games/<%= game._id %>/<%= review._id %>" method="GET">
+                <!-- <form action="/games/<#%= game._id %>/reviews/<#%= review._id %>/edit" method="GET">
                   <button type="submit">Edit Review</button>
-                </form>
+                </form> -->
                 <form action="/games/<%= game._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
                   <button type="submit">Delete Review</button>
                 </form>

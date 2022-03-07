@@ -12,10 +12,10 @@ router.get('/new', isLoggedIn, gamesCtrl.new)
 router.get('/:id', isLoggedIn, gamesCtrl.show)
 // GET - localhost:3000/games/:id/edit
 router.get('/:id/edit', isLoggedIn, gamesCtrl.edit)
-// GET - localhost:3000/reviews
+// GET - localhost:3000/games/:id/reviews
 router.get('/:id/reviews', isLoggedIn, gamesCtrl.newReview)
-// GET - localhost:3000/reviews
-router.get('/:id', isLoggedIn, gamesCtrl.editReview)
+// GET - localhost:3000/games/:id/reviews/:rid
+// router.get('/:id/reviews/:rid/edit', isLoggedIn, gamesCtrl.editReview)
  
 // POST - localhost:3000/games
 router.post('/', isLoggedIn, gamesCtrl.create)
