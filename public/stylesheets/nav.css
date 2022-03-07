@@ -18,10 +18,12 @@ body {
 .fox-nav {
   font-size: 1.5rem;
   margin: .5rem;
+  padding-left: .5rem;
 }
 
-/* .fox-nav:hover {
-} */
+.fox-nav:hover {
+  transform: scale(1.1);
+}
 
 .navbar-links ul{
   margin: 0;
@@ -42,6 +44,9 @@ body {
 
 .navbar-links li:hover {
   background-color: var(--log-in-hover-bg-color);
+  border-radius: 50px;
+  font-weight: 700;
+  transform: scale(1.1);
 }
 
 .toggle-button {
@@ -62,10 +67,29 @@ body {
   border-radius: 10px;
 }
 
+#profile-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#profile-icon:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   .toggle-button {
     display: flex;
+    margin-top: .5rem;
+    padding: 2px;
+    border: 1px solid rgb(0, 0, 0);
   }
+
+  .toggle-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
 
   .navbar-links {
     display: none;
@@ -93,5 +117,8 @@ body {
 
   .navbar-links.active {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }

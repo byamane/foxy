@@ -13,25 +13,26 @@
       alt="Fox"
       >
     </a>
-    <!-- <div class="project-name">Foxy</div> -->
-    <a href="#" class="toggle-button">
+
+    <div class="toggle-button">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
-    </a>
+    </div>
+    
     <div class="navbar-links">
         <ul>
           <li><a href="/games">All Games</a></li>
           <li><a href="/games/new">Add Game</a></li>
           <li><a href="/profiles">All Users</a></li>
             <% if (user?.profile.avatar) { %>
-              <li>
+              <a href="/profiles">
                 <img
                   id = "profile-icon"
                   src="<%= user.profile.avatar %>"
                   alt="<%= user.profile.name %> avatar"
                 />
-              </li>
+              </a>
             <% } %>
             <% if (user) { %>
               <!-- <li> 

@@ -1,0 +1,41 @@
+<%- include('../partials/html-head') %>
+<link 
+  href="/stylesheets/profiles/index.css" 
+  rel="stylesheet" 
+>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+
+  <div class="card-container">
+    <% profiles.forEach(profile => { %>
+      <div class="card-base card" id="games-layout">
+        <a class="profile-link" href="/profiles/<%= profile._id %>">
+          <% if (profile.avatar) { %>
+            <img
+              class="game-bg"
+              src="<%= profile.avatar %>"
+              alt="<%= profile.name %>'s avatar"
+              width="100"
+              height="80"
+            />
+          <% } else {%>
+            <img
+              class="game-bg"
+              src="https://picsum.photos/200"
+              alt="A placeholder avatar"
+              width="100"
+              height="80"
+            />
+          <% } %>
+          <div class="content">
+            <%= profile.name %>
+          </div>
+        </a>
+      </div>
+    <% }) %>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>
