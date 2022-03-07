@@ -7,7 +7,7 @@
   
   <section class="card-container">
     <% games.forEach(game => { %>
-      <div class="card-base" id="games-layout">
+      <div class="card-base card" id="games-layout">
         <a href="/games/<%= game._id %>">
           <img class="game-bg"
             src="/images/GoT.jpg" 
@@ -21,7 +21,10 @@
             <%= game.name %> 
           </button>
           <div class="content">
-            This is some placeholder text where I'll put other game info inside
+            Genre: <%= game.genre %>
+            <br>
+            <br>
+            Release Year: <%= game.releaseYear %> 
           </div>
         </a>
         
