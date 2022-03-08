@@ -9,12 +9,17 @@
     <% games.forEach(game => { %>
       <div class="card-base card" id="games-layout">
         <a href="/games/<%= game._id %>">
-          <img class="game-bg"
-            src="/images/GoT.jpg" 
-            alt="game-background"
-            width="350"
-            height="300"
-          >       
+          <%  if ( game.coverImage.includes(".jpg") || game.coverImage.includes(".png")){ %>
+            <img class="game-bg"
+              src="<%= game.coverImage %> " 
+              alt="game-background"
+            >       
+            <% } else { %>
+              <img class="game-bg-noImg"
+              src="/images/logo/FoxIcon.png"
+              alt="game-background"
+            <% } %> 
+          >    
         </a>
         <a class="btn-link" href="/games/<%= game._id %>">
           <button class="btn-base">
