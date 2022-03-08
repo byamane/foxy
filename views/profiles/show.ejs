@@ -4,7 +4,7 @@
 
 <main>
   <% if (profile.avatar) { %>
-    <div>
+    <div id="img-background">
       <img id="profile-image"
         src="<%= profile.avatar %>" 
         alt="<%= profile.name %> avatar"
@@ -13,6 +13,12 @@
     </div>
   <% } %>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
+
+  <section>
+    <h2 id="fav-header"><%= profile.name %>'s Favorite Games</h2>
+
+  </section>
+
 </main>
 
 <%- include('../partials/footer') %>

@@ -29,6 +29,9 @@ body {
   --log-out-hover-bg-color: #738494;
   --log-out-hover-color: white;
 
+  --soft-white: rgb(251, 250, 245);
+  --soft-orange: rgb(251, 190, 75);
+
   --profile-border-color: rgb(255, 102, 0);
 
   font-family: "Fredoka", sans-serif;
@@ -45,7 +48,12 @@ body {
 h1 {
   font-size: 10rem;
   margin: 0;
-  text-shadow: -1px 0 white, 0 2px rgb(255, 255, 255), 2px 0 white, 0 -1px white;
+  text-shadow: -2px 0 black, 0 3px black, 3px 0 black, 0 -2px black;
+  color: var(--soft-white);
+  margin: 80px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {

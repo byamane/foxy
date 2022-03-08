@@ -11,8 +11,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(252, 190, 76);
-  color: white;
+  background-color: var(--soft-orange);
+  color: var(--soft-white);
+  font-weight: 500;
   border: 3px outset grey;
   height: 7vh;
 }
