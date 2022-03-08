@@ -13,10 +13,13 @@ body {
   align-items: center;
   background-color: rgb(252, 190, 76);
   color: white;
+  border: 3px outset grey;
+  height: 7vh;
 }
 
 .fox-nav {
-  font-size: 1.5rem;
+  height: 50px;
+  width: 50px;
   margin: .5rem;
   padding-left: .5rem;
 }
@@ -39,7 +42,9 @@ body {
   text-decoration: none;
   color: white;
   padding: 1rem;
+  font-size: 2rem;
   display: block;
+  margin-top: 5px;
 }
 
 .navbar-links li:hover {
@@ -70,6 +75,9 @@ body {
 #profile-icon {
   margin-left: 10px;
   margin-right: 10px;
+  border: 2px outset rgb(116, 124, 117);
+  height: 50px;
+  width: 50px;
 }
 
 #profile-icon:hover{

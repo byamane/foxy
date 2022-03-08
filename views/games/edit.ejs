@@ -7,21 +7,22 @@
   <% if (user) { %>
     <form action="/games/<%= game._id %>?_method=PUT" method="POST">
       <label>Name:
-        <input type="text" name="name" autocomplete="off">
+        <input type="text" name="name" value="<%= game.name %>" autocomplete="off">
       </label><br>
       <label>Genre:
-        <input type="text" name="genre" autocomplete="off">
+        <input type="text" name="genre" value="<%= game.genre %>" autocomplete="off">
       </label><br>
       <label>ESRB Rating:
-        <input type="text" name="esrbRating" autocomplete="off">
+        <input type="text" name="esrbRating" value="<%= game.esrbRating %>" autocomplete="off">
       </label><br>
       <label>Release Year:
-        <input type="text" name="releaseYear" autocomplete="off">
+        <input type="text" name="releaseYear" value="<%= game.releaseYear %>" autocomplete="off">
       </label><br>
       <label>Cover Image:
-        <input type="text" name="coverImage" autocomplete="off">
+        <input type="text" name="coverImage" value="<%= game.coverImage %>" autocomplete="off">
       </label><br>
-      <button type="submit">Add Game</button>
+      <button type="submit">Submit
+      </button>
     </form>
   <% } %>
 </section>

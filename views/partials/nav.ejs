@@ -25,6 +25,19 @@
           <li><a href="/games">All Games</a></li>
           <li><a href="/games/new">Add Game</a></li>
           <li><a href="/profiles">All Users</a></li>
+          <% if (user) { %>
+            <li> 
+              <a href="/auth/logout">
+                Logout
+              </a>
+            </li>
+          <% } else { %>
+            <a href="/auth/google" class="siwg-link">
+              <button type="submit" class="siwg">
+                <img id="siwg-image" alt="Sign in with Google" />
+              </button>
+            </a>
+          <% } %>
             <% if (user?.profile.avatar) { %>
               <a href="/profiles">
                 <img
@@ -32,19 +45,6 @@
                   src="<%= user.profile.avatar %>"
                   alt="<%= user.profile.name %> avatar"
                 />
-              </a>
-            <% } %>
-            <% if (user) { %>
-              <!-- <li> 
-                <a href="/auth/logout">
-                  <button id="logout" type="submit">Logout</button>
-                </a>
-              </li> -->
-            <% } else { %>
-              <a href="/auth/google" class="siwg-link">
-                <button type="submit" class="siwg">
-                  <img id="siwg-image" alt="Sign in with Google" />
-                </button>
               </a>
             <% } %>
         </ul>

@@ -1,6 +1,7 @@
 h1 {
   font-size: 10rem;
   margin: 0;
+  text-shadow: -1px 0 white, 0 1px rgb(255, 255, 255), 1px 0 white, 0 -1px white;
 }
 
 h2 {
@@ -37,39 +38,40 @@ h2 {
 }
 
 .card-base {
-  width: 100px;
-  height: 130px;
+  width: 200px;
+  height: 260px;
   background-color: var(--log-in-hover-bg-color);
   margin: 50px;
   border-radius: 2px;
   box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
+  transition: 0.1s;
   overflow: hidden;
 }
 
 .card-container .card-base:hover {
-  width: 100px;
-  height: 130px;
+  width: 200px;
+  height: 260px;
   border-radius: 2px;
   background-color: var(--log-in-bg-color);
   margin: 50px;
-  box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+  box-shadow: 0 0 5px orange;
   transform: scale(1.1);
 }
 
 .content{
-  width: 100px;
-  height: 30px;
+  width: 200px;
+  height: 60px;
   border-radius: 2px;
-  margin-top: .5rem;
-  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color:black;
 }
 
 .game-bg {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 2px;
   position: relative;
   z-index: 1;
