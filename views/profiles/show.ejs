@@ -35,18 +35,25 @@
     <section class="card-container">
       <% profile.favorites.forEach(favorite => { %>
         <div class="card-base card" id="games-layout">
+          
+          <% if (isSelf) { %>
+            <a class="delete-link" action="/profiles/<%= profile._id %>?_method=DELETE" method="POST">
+              <div class="delete-button">X</div>
+            </a>
+          <% } %>
+          
           <a href="/games/<%= favorite._id %>">
             <%  if ( favorite.coverImage.includes(".jpg") || favorite.coverImage.includes(".png")){ %>
               <img class="game-bg"
-                src="<%= favorite.coverImage %>" 
-                alt="game-background"
-              >       
-              <% } else { %>
+              src="<%= favorite.coverImage %>" 
+              alt="game-background"
+              >
+              <% } else { %>   
                 <img class="game-bg-noImg"
-                  src="/images/logo/FoxIcon.png"
-                  alt="game-background"
+                src="/images/logo/FoxIcon.png"
+                alt="game-background"
+                >
                 <% } %> 
-                >    
               </a>
               <a class="btn-link" href="/games/<%= favorite._id %>">
                 <button class="btn-base">
