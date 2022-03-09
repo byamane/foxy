@@ -1,6 +1,6 @@
 section {
-  width: 40vw;
-  height: 50vh;
+  width: 600px;
+  height: 550px;
   background-color: rgb(251, 250, 245);
   border: 2px solid black;
   text-align: center;
@@ -25,12 +25,12 @@ h2 {
 }
 
 #intro-body{
-  font-size: 1.5rem;
+  font-size: 15px;
 }
 
 #log-in {
-  height: 5vh;
-  width: 10vw;
+  height: 60px;
+  width: 120px;
   margin-top: 5px;
   font-family: "Fredoka", sans-serif;
   font-size: 2rem;
@@ -47,8 +47,8 @@ h2 {
 }
 
 #log-out {
-  height: 5vh;
-  width: 10vw;
+  height: 60px;
+  width: 120px;
   margin-top: 5px;
   font-family: "Fredoka", sans-serif;
   font-size: 2rem;

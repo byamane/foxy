@@ -14,7 +14,7 @@
   <% } %>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
 
-  <section>
+  <section class="add-favorites">
     <h2 id="fav-header"><%= isSelf ? "Your" : profile.name + "'s" %> Favorite Games</h2>
     
     
@@ -32,39 +32,41 @@
       
   <% if (profile.favorites.length) { %>
     
-    <% profile.favorites.forEach(favorite => { %>
-      <div class="card-base card" id="games-layout">
-        <a href="/games/<%= favorite._id %>">
-          <%  if ( favorite.coverImage.includes(".jpg") || favorite.coverImage.includes(".png")){ %>
-            <img class="game-bg"
-            src="<%= favorite.coverImage %> " 
-            alt="game-background"
-            >       
-            <% } else { %>
-              <img class="game-bg-noImg"
-              src="/images/logo/FoxIcon.png"
-              alt="game-background"
-              <% } %> 
-              >    
-            </a>
-            <a class="btn-link" href="/games/<%= favorite._id %>">
-              <button class="btn-base">
-                <%= favorite.name %> 
-              </button>
-              <div class="content">
-                Genre: <%= favorite.genre %>
-                <br>
-                <br>
-                Release Year: <%= favorite.releaseYear %> 
-              </div>
-            </a>
-          </div>
-    <% }) %>
-  <% } else { %>
-    <h1 id="no-favorites">
-      <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any favorite games yet!
-    </h1>
-  <% } %>  
+    <section class="card-container">
+      <% profile.favorites.forEach(favorite => { %>
+        <div class="card-base card" id="games-layout">
+          <a href="/games/<%= favorite._id %>">
+            <%  if ( favorite.coverImage.includes(".jpg") || favorite.coverImage.includes(".png")){ %>
+              <img class="game-bg"
+                src="<%= favorite.coverImage %>" 
+                alt="game-background"
+              >       
+              <% } else { %>
+                <img class="game-bg-noImg"
+                  src="/images/logo/FoxIcon.png"
+                  alt="game-background"
+                <% } %> 
+                >    
+              </a>
+              <a class="btn-link" href="/games/<%= favorite._id %>">
+                <button class="btn-base">
+                  <%= favorite.name %> 
+                </button>
+                <div class="content">
+                  Genre: <%= favorite.genre %>
+                  <br>
+                  <br>
+                  Release Year: <%= favorite.releaseYear %> 
+                </div>
+              </a>
+            </div>
+      <% }) %>
+    <% } else { %>
+      <h1 id="no-favorites">
+        <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any favorite games yet!
+      </h1>
+    <% } %>
+  </section> 
 </main>
 
 <%- include('../partials/footer') %>

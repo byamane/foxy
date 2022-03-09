@@ -11,12 +11,98 @@ h3 {
   margin-top: 40px;
 }
 
-section {
+.add-favorites {
   width: 350px;
   height: 125px;
   background-color: var(--soft-white);
   border: 2px solid black;
   margin-top: 20px;
+}
+
+.btn-base{
+  display: flex;
+  width: 160px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: rgb(114, 114, 114);
+  color: white;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-top: -25px;
+  font-size: 1.5rem;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.btn-link{
+  text-decoration: none;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.card-container:hover .card-base{
+  filter: blur(1px);
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+
+.card-base {
+  width: 200px;
+  height: 300px;
+  background-color: var(--log-in-hover-bg-color);
+  margin: 50px 25px;
+  border-radius: 40px;
+  box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  overflow: hidden;
+}
+
+.card-container .card-base:hover {
+  width: 200px;
+  height: 300px;
+  background-color: var(--log-in-bg-color);
+  margin: 50px 25px;
+  border-radius: 40px;
+  border: 2px solid white;
+  box-shadow: 0 0 5px orange;
+  filter: blur(0px);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.content{
+  width: 200px;
+  height: 120px;
+  border-radius: 40px;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color:black;
+  font-style: italic;
+}
+
+.game-bg {
+  width: 200px;
+  height: 175px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.game-bg-noImg{
+  background-color: rgb(182, 177, 177);
+  width: 200px;
+  height: 175px;
+  border-radius: 40px
 }
 
 #add-to-favorites{
