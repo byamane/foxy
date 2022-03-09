@@ -2,21 +2,32 @@ h1 {
   margin: 0;
 }
 
-section {
-  width: 50vw;
-  height: 20vh;
-  background-color: var(--soft-white);
-  border: 2px solid black;
-  margin-top: 2vh;
-  /* display: flex;
-  justify-content: center;
-  text-align: center; */
+h2 {
+  margin: 0;
+  margin-top: 10px;
 }
 
-#fav-header {
+h3 {
+  margin-top: 40px;
+}
+
+section {
+  width: 350px;
+  height: 125px;
+  background-color: var(--soft-white);
+  border: 2px solid black;
+  margin-top: 20px;
+}
+
+#add-to-favorites{
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  margin-top: 35px;
+}
+
+#no-favorites {
+  font-size: 50px;
+  margin-top: 40px;
 }
 
 #profile-image {
