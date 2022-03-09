@@ -37,9 +37,9 @@
         <div class="card-base card" id="games-layout">
           
           <% if (isSelf) { %>
-            <a class="delete-link" action="/profiles/<%= profile._id %>?_method=DELETE" method="POST">
-              <div class="delete-button">X</div>
-            </a>
+            <form class="delete-link" action="/profiles/<%= profile._id %>/<%= favorite._id %>?_method=DELETE" method="POST">
+              <button class="delete-button" type="submit">X</button>
+            </form>
           <% } %>
           
           <a href="/games/<%= favorite._id %>">

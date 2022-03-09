@@ -50,8 +50,25 @@ function addFavorite(req, res){
   })
 }
 
+function deleteFavorite(req, res){
+  Profile.findById(req.params.id)
+  .populate("favorites")
+    .then(profile => {
+      profile.favorites.remove({_id: req.params.fid})
+      profile.save()
+      .then(() => {
+        res.redirect(`/profiles/${req.params.id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/profiles/${req.params.id}`)
+  })
+}
+
 export {
   index,
   show,
   addFavorite,
+  deleteFavorite
 }

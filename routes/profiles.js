@@ -12,6 +12,9 @@ router.get("/:id", isLoggedIn, profilesCtrl.show)
 // POST - localhost3000:profiles/:id
 router.post("/:id", isLoggedIn, profilesCtrl.addFavorite)
 
+// DELETE - localhost3000:profiles/:id
+router.delete("/:id/:fid", isLoggedIn, profilesCtrl.deleteFavorite)
+
 export {
   router
 }
