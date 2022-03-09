@@ -1,4 +1,5 @@
 import { Profile } from "../models/profile.js"
+import { Game } from "../models/game.js"
 
 function index(req, res) {
   Profile.find({})
@@ -16,14 +17,18 @@ function index(req, res) {
 
 function show(req, res) {
   Profile.findById(req.params.id)
+  .populate("favorites")
   .then(profile => {
     Profile.findById(req.user.profile._id)
     .then(self => {
       const isSelf = self._id.equals(profile._id)
-      res.render("profiles/show", {
-        title: `${profile.name}'s profile`,
-        profile,
-        isSelf
+      Game.find({_id: {$nin: profile.favorites}}, function(err, games) {
+        res.render('profiles/show', {
+          title: `${profile.name}'s profile`,
+          profile,
+          isSelf,
+          games
+        })
       })
     })
   })
@@ -32,6 +37,25 @@ function show(req, res) {
     res.redirect("/")
   })
 }
+
+// function show(req, res) {
+//   Profile.findById(req.params.id)
+//   .then(profile => {
+//     Profile.findById(req.user.profile._id)
+//     .then(self => {
+//       const isSelf = self._id.equals(profile._id)
+//       res.render("profiles/show", {
+//         title: `${profile.name}'s profile`,
+//         profile,
+//         isSelf
+//       })
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect("/")
+//   })
+// }
 
 export {
   index,

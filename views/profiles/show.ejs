@@ -16,6 +16,53 @@
 
   <section>
     <h2 id="fav-header"><%= profile.name %>'s Favorite Games</h2>
+    
+    <!-- </% if (profile.favorites.length) { %>
+      
+      </% profile.favorites.forEach(favorite => { %>
+        <div class="card-base card" id="games-layout">
+          <a href="/games/</%= game._id %>">
+            </%  if ( game.coverImage.includes(".jpg") || game.coverImage.includes(".png")){ %>
+              <img class="game-bg"
+              src="</%= game.coverImage %> " 
+              alt="game-background"
+              >       
+              </% } else { %>
+                <img class="game-bg-noImg"
+                src="/images/logo/FoxIcon.png"
+                alt="game-background"
+                </% } %> 
+                >    
+              </a>
+              <a class="btn-link" href="/games/</%= game._id %>">
+                <button class="btn-base">
+                  </%= game.name %> 
+                </button>
+                <div class="content">
+                  Genre: </%= game.genre %>
+                  <br>
+                  <br>
+                  Release Year: </%= game.releaseYear %> 
+                </div>
+              </a>
+            </div>
+      </% }) %>
+      </% } else { %>
+        <h2>
+          </%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any cats!
+        </h2>
+    </% } %>  -->
+            <% if (isSelf) { %>
+              <form id="add-to-favorites" action="/profiles/<%= profile.id %> " method="POST">
+                <select name="gameId">
+                  <% games.forEach(game => { %>
+                    <option value="<%= game._id %>"><%= game.name %></option>
+                  <% }) %>
+                </select>
+                <button type="submit">Add to Favorites</button>
+              </form>
+            <% } %> 
+
 
   </section>
 
