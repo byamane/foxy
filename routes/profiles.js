@@ -9,6 +9,9 @@ router.get("/", isLoggedIn, profilesCtrl.index)
 // GET - localhost:3000/profiles/:id
 router.get("/:id", isLoggedIn, profilesCtrl.show)
 
+// POST - localhost3000:profiles/:id
+router.post("/:id", isLoggedIn, profilesCtrl.addFavorite)
+
 export {
   router
 }

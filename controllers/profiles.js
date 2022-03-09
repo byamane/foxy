@@ -17,6 +17,7 @@ function index(req, res) {
 
 function show(req, res) {
   Profile.findById(req.params.id)
+  .populate("games")
   .populate("favorites")
   .then(profile => {
     Profile.findById(req.user.profile._id)
@@ -38,26 +39,19 @@ function show(req, res) {
   })
 }
 
-// function show(req, res) {
-//   Profile.findById(req.params.id)
-//   .then(profile => {
-//     Profile.findById(req.user.profile._id)
-//     .then(self => {
-//       const isSelf = self._id.equals(profile._id)
-//       res.render("profiles/show", {
-//         title: `${profile.name}'s profile`,
-//         profile,
-//         isSelf
-//       })
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect("/")
-//   })
-// }
+function addFavorite(req, res){
+  Profile.findById(req.params.id)
+  .then(profile => {
+    profile.favorites.push(req.body.gameId)
+    profile.save()
+    .then(() => {
+      res.redirect(`/profiles/${profile._id}`)
+    })
+  })
+}
 
 export {
   index,
   show,
+  addFavorite,
 }
