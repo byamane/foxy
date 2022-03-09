@@ -36,13 +36,11 @@ body {
 
   font-family: "Fredoka", sans-serif;
   margin: 0;
-  /* background-color: var(--bg-color); */
-  background-image: linear-gradient(rgb(207, 84, 84), black),
-  url(/images/foxGoT.jpg);
   height: 100vh;
+  background-image: linear-gradient(rgb(207, 84, 84), black), url(/images/foxGoT.jpg);
+  background-attachment: fixed;
   background-blend-mode: saturation;
   background-size: cover;
-  /* backdrop-filter: blur(1px); */
 }
 
 h1 {
