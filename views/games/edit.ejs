@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 <link rel="stylesheet" href="/stylesheets/games/show.css">
 
-<section>
+<section class="content-push">
   <h1>Edit <%= game.name %></h1>
   <% if (user) { %>
     <form action="/games/<%= game._id %>?_method=PUT" method="POST">

@@ -39,7 +39,7 @@
             </a>
           <% } %>
             <% if (user?.profile.avatar) { %>
-              <a href="/profiles">
+              <a href="/profiles/<%= user.profile._id %>">
                 <img
                   id = "profile-icon"
                   src="<%= user.profile.avatar %>"

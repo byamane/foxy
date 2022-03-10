@@ -45,10 +45,9 @@ body {
 
 h1 {
   font-size: 100px;
-  margin: 0;
   text-shadow: -2px 0 black, 0 3px black, 3px 0 black, 0 -2px black;
   color: var(--soft-white);
-  margin: 80px 0 30px 0;
+  margin: 100px 0 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
