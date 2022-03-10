@@ -94,10 +94,6 @@ h2 {
 }
 
 @media only screen and (max-width: 768px){
-  h1 {
-    font-size: 5rem;
-  }
-
   section {
     width: 80vw;
     height: 67.5vh;
@@ -113,8 +109,9 @@ h2 {
     height: auto;
     min-height: 25px;
     border-radius: 50px;
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(228, 164, 46);
     color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-weight: 600;
     font-style: italic;
     margin: 0 auto;

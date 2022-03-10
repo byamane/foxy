@@ -18,6 +18,7 @@ body {
   color: var(--soft-white);
   font-weight: 500;
   border: 3px outset grey;
+  z-index: 4;
 }
 
 .fox-nav {

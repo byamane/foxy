@@ -47,7 +47,7 @@ h1 {
   font-size: 100px;
   text-shadow: -2px 0 black, 0 3px black, 3px 0 black, 0 -2px black;
   color: var(--soft-white);
-  margin: 100px 0 30px 0;
+  margin: 100px 0 15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,4 +82,11 @@ img {
   border-radius: 50px;
   justify-self: center;
   margin-top: .2rem;
+}
+
+@media only screen and (max-width: 768px){
+  h1 {
+    font-size: 100px;
+    margin-top: 90px;
+  }
 }

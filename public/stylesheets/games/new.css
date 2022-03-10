@@ -142,9 +142,10 @@ label {
 }
 
 @media only screen and (max-width: 768px){
-  h1 {
-    font-size: 5rem;
+  h1{
+    font-size: 90px;
   }
+
 
   section {
     width: 80vw;
