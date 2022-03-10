@@ -19,17 +19,17 @@ Users may create any game that is not currently on the site, and then have acces
 ## Technologies used 🧑‍💻
 
 <img src="https://img.shields.io/badge/-MongoDB-47?logo=MongoDB&logoColor=darkgreen&style=plastic">
-<br>
+
 <img src="https://img.shields.io/badge/-Express-252525?logo=Express&logoColor=white&style=plastic">
-<br>
+
 <img src="https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white&style=plastic">
-<br>
+
 <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=JavaScript&logoColor=black&style=plastic">
-<br>
+
 <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=CSS3&logoColor=white&style=plastic">
-<br>
+
 <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=HTML5&logoColor=white&style=plastic">
-<br>
+
 <img src="https://img.shields.io/badge/-Git-purple?logo=Git&logoColor=white&style=plastic">
 
 ---
