@@ -14,6 +14,8 @@ Users may create any game that is not currently on the site, and then have acces
 
 ## [Check out the app here!](https://foxy-by.herokuapp.com/) ✅
 
+[Wireframe for Foxy](https://whimsical.com/foxy-Y5ZNpH3Mgh2M9rThxxVVY8)
+
 ---
 
 ## Technologies used 🧑‍💻
