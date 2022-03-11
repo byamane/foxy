@@ -4,32 +4,41 @@
 
 <main class="content-push">
 	<h1>Add Review</h1>
-  <h2><%= game.name %> </h2>
 
-  <% if (user) { %>
-    <form 
-      id="add-review-form" 
-      action="/games/<%= game._id %>" 
-      method="post"
-    >
-    <label for="rating-select">Rating:</label>
-    <select name="rating" id="rating-select">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10" selected>10</option>
-    </select>
-    <label for="content-textarea">Review:</label>
-    <textarea maxlength="300" name="content" id="content-textarea"></textarea>
-      <button type="submit">Submit Review</button>
-    </form>
-  <% } %>
+  <section>
+    <h2><%= game.name %></h2>
 
-</main>  
+    <% if (user) { %>
+      <form 
+        id="add-review-form" 
+        action="/games/<%= game._id %>" 
+        method="post"
+      >
+        <label for="rating-select">Rating:</label>
+        <select name="rating" id="rating-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10" selected>10</option>
+        </select>
+        
+        <br>
+        
+        <label for="content-textarea">Review:</label><br>
+        <textarea maxlength="750" name="content" id="content-textarea"></textarea>
+        
+        <br>
+          
+        <button id="submit-review" type="submit">Submit Review</button>
+      </form>
+    <% } %>
+  </section>
+  
+</main>
 <%- include('../partials/footer') %>

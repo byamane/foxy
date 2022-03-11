@@ -1,113 +1,101 @@
+form {
+  margin-top: 10px;
+}
+
 section {
-  width: 40vw;
-  height: 50vh;
-  background-color: var(--section-bg-color);
+  width: auto;
+  height: auto;
+  background-color: var(--soft-white);
   border: 2px solid black;
   text-align: center;
   padding: 0 20px 10px 20px;
+  margin-bottom: 30px;
 }
 
-h2 {
-  font-size: 4rem;
+label {
+  font-size: 20px;
 }
 
-#heading {
-  margin: 80px 0 30px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#fox-heading {
-  height: 10rem;
-  width: 10rem;
-  margin-left: 20px;
-}
-
-#intro-body{
-  font-size: 1.5rem;
-}
-
-#log-in {
-  height: 5vh;
-  width: 10vw;
+#content-textarea{
+  width: 400px;
+  height: 200px;
   margin-top: 5px;
+}
+
+#esrbSelect {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#rating-select{
+  margin: 10px 0;
+  margin-top: -20px;
+  margin-left: 5px;
+  width: 50px;
+  font-size: 22px;
+}
+
+#submit-review {
+  height: 60px;
+  width: 150px;
+  margin: 20px 0;
+  margin-bottom: 10px;
   font-family: "Fredoka", sans-serif;
-  font-size: 2rem;
+  font-size: 22px;
   background-color: var(--log-in-bg-color);
   color: var(--log-in-color);
   border-radius: 3px;
   font-weight: 800;
 }
 
-#log-in:hover {
+#submit-review:hover {
   background-color: var(--log-in-hover-bg-color);
   color: var(--log-in-hover-color);
   cursor: pointer;
 }
 
-#log-out {
-  height: 5vh;
-  width: 10vw;
-  margin-top: 5px;
-  font-family: "Fredoka", sans-serif;
-  font-size: 2rem;
-  background-color: var(--log-out-bg-color);
-  color: var(--log-out-color);
-  border-radius: 3px;
-  font-weight: 800;
-}
-
-#log-out:hover {
-  background-color: var(--log-out-hover-bg-color);
-  color: var(--log-out-hover-color);
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 500px){
   h1 {
-    font-size: 5rem;
+    font-size: 60px;
+    padding: 0 10px;
   }
 
-  section {
-    width: 80vw;
-    height: 67.5vh;
-    background-color: var(--section-bg-color);
-    border: 2px solid black;
-    text-align: center;
-    padding: 0 20px 10px 20px;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  #heading {
-    margin: 35px 0 15px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  label {
+    font-size: 15px;
   }
   
-  #fox-heading {
-    height: 5rem;
-    width: 5rem;
-    margin-left: 10px;
+  #content-textarea{
+    width: 250px;
+    height: 200px;
+    margin-top: 5px;
+    font-size: 12px;
   }
-
-  #intro-body{
-    font-size: 1.1rem;
+  
+  #esrbSelect {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 5px;
   }
-
-  #log-in {
-    height: 5vh;
-    width: 20vw;
-    font-size: 1.5rem;
+  
+  #rating-select{
+    margin: 10px 0;
+    margin-top: -20px;
+    margin-left: 5px;
+    width: 50px;
+    font-size: 22px;
   }
-
-  #log-out {
-    height: 5vh;
-    width: 20vw;
-    font-size: 1.5rem;
+  
+  #submit-review {
+    height: 60px;
+    width: 150px;
+    margin: 20px 0;
+    margin-bottom: 10px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 22px;
+    background-color: var(--log-in-bg-color);
+    color: var(--log-in-color);
+    border-radius: 3px;
+    font-weight: 800;
   }
 }
