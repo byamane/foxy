@@ -54,6 +54,16 @@ div {
   background-color: var(--soft-white);
 }
 
+#game-image {
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 450px;
+  justify-content: center;
+  border: 2px solid var(--soft-orange);
+  box-shadow: 0 0 5px orange;
+}
+
 #review-body {
   flex-wrap: wrap;
   word-wrap: break-word;
@@ -75,6 +85,7 @@ div {
   justify-content: center;
   text-align: center;
   padding: 10px 20px 10px 20px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 768px){
@@ -99,13 +110,24 @@ div {
   }
 
   #details-section {
-    padding: 0 50px;
+    width: 350px;
+    padding: 0 25px;
     padding-bottom: 15px;
   }
 
+  #game-image {
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 250px;
+    justify-content: center;
+    border: 2px solid var(--soft-orange);
+    box-shadow: 0 0 5px orange;
+  }
+
   #reviews-section {
-    max-width: 315px;
-    padding: 0 50px 25px 50px;
+    width: 350px;
+    padding: 0 25px 25px 25px;
     margin-bottom: 50px;
     background-color: var(--soft-white);
     border: 2px solid black;
@@ -117,5 +139,6 @@ div {
     justify-content: center;
     text-align: center;
     padding: 10px 20px 10px 20px;
+    margin-top: 15px;
   }
 }

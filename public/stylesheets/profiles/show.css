@@ -190,6 +190,10 @@ section {
     height: auto;
   }
 
+  h1 {
+    font-size: 70px;
+  }
+
   h2 {
     font-size: 2rem;
   }
@@ -253,5 +257,12 @@ section {
     border-radius: 20px;
     bottom: 20px;
     z-index: 1;
+  }
+
+  #no-favorites {
+    font-size: 40px;
+    padding: 0 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 }

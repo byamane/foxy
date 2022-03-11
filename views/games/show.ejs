@@ -5,6 +5,12 @@
 <main class="content-push">
   <h1><%= game.name %></h1>
 
+  <img 
+    id="game-image"
+    src="<%= game.coverImage %>" 
+    alt="game-background"
+  >    
+
   <section id="user-options">
     <% if (game.addedBy.equals(user?.profile._id)) { %>
       <form action="/games/<%= game._id %>/edit" method="GET">
