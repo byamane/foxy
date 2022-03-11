@@ -90,6 +90,10 @@ section {
   opacity: 1;
 }
 
+.card-base:hover .btn-base {
+  background-color: var(--log-in-bg-color);
+} 
+
 .content{
   width: 0;
   height: 0;
