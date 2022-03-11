@@ -2,11 +2,6 @@ form {
   margin-top: 10px;
 }
 
-h1 {
-  flex-wrap: wrap;
-  text-align: center;
-}
-
 section {
   width: auto;
   height: auto;

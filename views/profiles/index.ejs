@@ -5,7 +5,7 @@
 <main class="content-push">
   <h1><%= title %></h1>
 
-  <div class="card-container">
+  <section class="card-container">
     <% profiles.forEach(profile => { %>
       <div class="card-base card" id="games-layout">
         <a class="profile-link" href="/profiles/<%= profile._id %>">
@@ -28,7 +28,8 @@
         </a>
       </div>
     <% }) %>
-  </div>
+  </section>
 
 </main>
+
 <%- include('../partials/footer') %>

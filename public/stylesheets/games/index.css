@@ -96,8 +96,8 @@ h2 {
 
 @media only screen and (max-width: 768px){
   section {
-    width: 80vw;
-    height: 67.5vh;
+    width: 90vw;
+    height: auto;
   }
 
   h2 {
