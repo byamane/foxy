@@ -1,117 +1,134 @@
+form {
+  margin-top: 20px;
+}
+
 section {
-  width: 100vw;
-  height: 50vh;
+  width: 30vw;
+  height: 40vh;
   background-color: var(--section-bg-color);
   border: 2px solid black;
   text-align: center;
   padding: 0 20px 10px 20px;
 }
 
-h2 {
+input {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+label {
   font-size: 4rem;
-}
-
-div {
-  font-size: 2rem;
-}
-
-#heading {
-  margin: 80px 0 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#fox-heading {
-  height: 10rem;
-  width: 10rem;
-  margin-left: 20px;
-}
-
-#intro-body{
-  font-size: 1.5rem;
-}
-
-#log-in {
-  height: 5vh;
-  width: 10vw;
-  margin-top: 5px;
+#add-game {
+  height: 60px;
+  width: 150px;
+  margin-top: 10px;
   font-family: "Fredoka", sans-serif;
-  font-size: 2rem;
+  font-size: 22px;
   background-color: var(--log-in-bg-color);
   color: var(--log-in-color);
   border-radius: 3px;
   font-weight: 800;
 }
 
-#log-in:hover {
+#add-game:hover {
   background-color: var(--log-in-hover-bg-color);
   color: var(--log-in-hover-color);
   cursor: pointer;
 }
 
-#log-out {
-  height: 5vh;
-  width: 10vw;
-  margin-top: 5px;
-  font-family: "Fredoka", sans-serif;
-  font-size: 2rem;
-  background-color: var(--log-out-bg-color);
-  color: var(--log-out-color);
-  border-radius: 3px;
-  font-weight: 800;
+#esrbSelect {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
-#log-out:hover {
-  background-color: var(--log-out-hover-bg-color);
-  color: var(--log-out-hover-color);
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 768px){
-  h1 {
-    font-size: 5rem;
+@media only screen and (max-width: 1200px){
+  h1{
+    font-size: 70px;
   }
+
 
   section {
     width: 80vw;
-    height: 67.5vh;
+    height: 400px;
     background-color: var(--section-bg-color);
     border: 2px solid black;
     text-align: center;
     padding: 0 20px 10px 20px;
+    font-size: 14px;
   }
 
-  h2 {
-    font-size: 2rem;
+  form {
+    margin-top: 30px;
   }
 
-  #heading {
-    margin: 35px 0 15px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #fox-heading {
-    height: 5rem;
-    width: 5rem;
-    margin-left: 10px;
+  input {
+    margin-top: 0;
   }
 
-  #intro-body{
-    font-size: 1.1rem;
+  label {
+    font-size: 20px;
+    margin-top: -10px;
   }
 
-  #log-in {
-    height: 5vh;
-    width: 20vw;
-    font-size: 1.5rem;
+  #add-game {
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    margin-top: -10px;
   }
 
-  #log-out {
-    height: 5vh;
-    width: 20vw;
-    font-size: 1.5rem;
+  #esrbSelect {
+    font-size: 12px;
+    margin-top: 0;
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 380px){
+  h1{
+    font-size: 70px;
+  }
+
+
+  section {
+    width: 85vw;
+    height: 400px;
+    background-color: var(--section-bg-color);
+    border: 2px solid black;
+    text-align: center;
+    padding: 0 20px 10px 20px;
+    font-size: 14px;
+  }
+
+  form {
+    margin-top: 30px;
+  }
+
+  input {
+    margin-top: 0;
+  }
+
+  label {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+
+  #add-game {
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    margin-top: -10px;
+  }
+
+  #esrbSelect {
+    font-size: 12px;
+    margin-top: 0;
+    margin-left: 5px;
   }
 }

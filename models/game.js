@@ -18,7 +18,12 @@ const reviewSchema = new Schema ({
 const gameSchema = new Schema ({
   name: {type: String, required: true, unique: true},
   genre: {type: String, required: true},
-  esrbRating: {type: String, required: true},
+  esrbRating: {
+    type: String, 
+    enum: ["E", "E10", "T", "M", "AO", "RP"],
+    default: "E",
+    required: true
+  },
   releaseYear: {type: Number, min: 1958, max: 2022, required: true},
   coverImage: {type: String, required: true},
   addedBy: {type: Schema.Types.ObjectId, ref: "Profile"},

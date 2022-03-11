@@ -11,25 +11,34 @@ h3 {
   margin-top: 40px;
 }
 
+section {
+  width: 80vw;
+  height: auto;
+}
+
 .add-favorites {
-  width: 350px;
-  height: 125px;
+  width: auto;
+  height: auto;
   background-color: var(--soft-white);
   border: 2px solid black;
   margin-top: 20px;
+  text-align: center;
 }
 
 .btn-base{
   display: flex;
-  width: 160px;
-  height: 50px;
+  width: 125px;
+  height: auto;
+  min-height: 25px;
   border-radius: 50px;
-  background-color: rgb(114, 114, 114);
+  background-color: rgb(228, 164, 46);
   color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-weight: 600;
+  font-style: italic;
   margin: 0 auto;
-  margin-top: -25px;
-  font-size: 1.5rem;
+  margin-top: -90px;
+  font-size: 14px;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -57,10 +66,11 @@ h3 {
 
 .card-base {
   width: 200px;
-  height: 300px;
+  height: 200px;
   background-color: var(--log-in-hover-bg-color);
-  margin: 50px 25px;
-  border-radius: 40px;
+  margin: 20px;
+  margin-top: 40px;
+  border-radius: 30px;
   box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
   transition: 0.2s;
   overflow: hidden;
@@ -68,20 +78,21 @@ h3 {
 
 .card-container .card-base:hover {
   width: 200px;
-  height: 300px;
+  height: 200px;
   background-color: var(--log-in-bg-color);
-  margin: 50px 25px;
-  border-radius: 40px;
+  margin: 20px;
+  margin-top: 40px;
+  border-radius: 30px;
   border: 2px solid white;
   box-shadow: 0 0 5px orange;
   filter: blur(0px);
-  transform: scale(1.1);
+  transform: scale(1.2);
   opacity: 1;
 }
 
 .content{
-  width: 200px;
-  height: 120px;
+  width: 0;
+  height: 0;
   border-radius: 40px;
   padding: 15px 35px;
   font-size: 1.2rem;
@@ -112,25 +123,51 @@ h3 {
   text-decoration: none;
 }
 
+.delete-btn-hidden{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: rgb(114, 114, 114);
+  color: white;
+  font-weight: 600;
+  margin: 0 auto;
+  font-size: 20px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .game-bg {
   width: 200px;
-  height: 175px;
-  border-radius: 40px;
+  height: 200px;
+  border-radius: 20px;
   position: relative;
+  bottom: 30px;
   z-index: 1;
 }
 
 .game-bg-noImg{
   background-color: rgb(182, 177, 177);
-  width: 200px;
-  height: 175px;
-  border-radius: 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 40px
 }
 
 #add-to-favorites{
   display: flex;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 20px;
+  padding-bottom: 25px;
+}
+
+#fav-header {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 15px;
 }
 
 #no-favorites {
@@ -145,4 +182,71 @@ h3 {
   box-shadow: 0 0 5px orange;
   margin-top: 100px;
   border-radius: 2px;
+}
+
+@media only screen and (max-width: 768px){
+  section {
+    width: 80vw;
+    height: auto;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .btn-base{
+    width: 90px;
+    height: auto;
+    min-height: 25px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: -65px;
+    font-size: 10px;
+  }
+  
+  .card-base {
+    width: 125px;
+    height: 125px;
+    margin: 20px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-container .card-base:hover {
+    width: 125px;
+    height: 125px;
+    background-color: var(--log-in-bg-color);
+    margin: 20px;
+    border-radius: 30px;
+  }
+  
+  .content{
+    width: 0;
+    height: 0;
+  }
+
+  .delete-button{
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(114, 114, 114);
+  }
+  
+  .game-bg {
+    width: 125px;
+    height: 125px;
+    border-radius: 20px;
+    position: relative;
+    bottom: 20px;
+    z-index: 1;
+  }
+  
+  .game-bg-noImg{
+    background-color: rgb(182, 177, 177);
+    width: 125px;
+    height: 125px;
+    border-radius: 20px;
+    bottom: 20px;
+    z-index: 1;
+  }
 }

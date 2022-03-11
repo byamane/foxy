@@ -122,23 +122,6 @@ function createReview(req, res){
   })
 }
 
-// function editReview(req, res) {
-//   Game.findById(req.params.id, (error, game) => {
-//     game.reviews.findById(req.params.id, (error, review) => {
-//       console.log(req.params.rid)
-//       res.render("games/editReview", {
-//         game,
-//         review,
-//         title: "Edit Review"
-//       })
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//   })
-// }
-
-
 function deleteReview(req, res){
   Game.findById(req.params.id, (error, game) => {
     game.reviews.id(req.params.rid).remove()
@@ -147,7 +130,6 @@ function deleteReview(req, res){
     })
   })
 }
-
 
 export {
   index,
@@ -159,6 +141,5 @@ export {
   deleteGame as delete,
   newReview,
   createReview,
-  // editReview,
   deleteReview,
 }

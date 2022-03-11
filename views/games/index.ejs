@@ -18,27 +18,19 @@
               <img class="game-bg-noImg"
               src="/images/logo/FoxIcon.png"
               alt="game-background"
-            <% } %> 
-          >    
+            <% } %>     
         </a>
         <a class="btn-link" href="/games/<%= game._id %>">
           <button class="btn-base">
             <%= game.name %> 
           </button>
           <div class="content">
-            Genre: <%= game.genre %>
-            <br>
-            <br>
-            Release Year: <%= game.releaseYear %> 
+            <%= game.genre %>
           </div>
         </a>
       </div>
         <% }) %>
   </section>
-
+  
 </main>
-
-
-
-
 <%- include('../partials/footer') %>

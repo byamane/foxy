@@ -51,4 +51,4 @@ Users may create any game that is not currently on the site, and then have acces
 
 ### Credits 🎥
 
-- Background image from [Ghosts of Tsushima](https://mobile.twitter.com/suckerpunchprod)
+- Background image from [Ghost of Tsushima](https://mobile.twitter.com/suckerpunchprod)

@@ -3,6 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main class="content-push">
+  
   <% if (profile.avatar) { %>
     <div id="img-background">
       <img id="profile-image"
@@ -12,11 +13,11 @@
       >
     </div>
   <% } %>
+  
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
 
   <section class="add-favorites">
     <h2 id="fav-header"><%= isSelf ? "Your" : profile.name + "'s" %> Favorite Games</h2>
-    
     
     <% if (isSelf) { %>
       <form id="add-to-favorites" action="/profiles/<%= profile.id %>" method="POST">
@@ -40,6 +41,11 @@
             <form class="delete-link" action="/profiles/<%= profile._id %>/<%= favorite._id %>?_method=DELETE" method="POST">
               <button class="delete-button" type="submit">X</button>
             </form>
+          <% } else { %>
+            <!-- To maintain image & card styling between self and other user pages -->
+            <a href="/games/<%= favorite._id %>">
+              <button class="delete-btn-hidden">X</button>
+            </a>
           <% } %>
           
           <a href="/games/<%= favorite._id %>">
@@ -54,19 +60,15 @@
                 alt="game-background"
                 >
                 <% } %> 
-              </a>
-              <a class="btn-link" href="/games/<%= favorite._id %>">
-                <button class="btn-base">
-                  <%= favorite.name %> 
-                </button>
-                <div class="content">
-                  Genre: <%= favorite.genre %>
-                  <br>
-                  <br>
-                  Release Year: <%= favorite.releaseYear %> 
-                </div>
-              </a>
-            </div>
+          </a>
+
+          <a class="btn-link" href="/games/<%= favorite._id %>">
+            <button class="btn-base">
+              <%= favorite.name %> 
+            </button>
+          </a>
+
+        </div>
       <% }) %>
     <% } else { %>
       <h1 id="no-favorites">
@@ -74,6 +76,6 @@
       </h1>
     <% } %>
   </section> 
-</main>
 
+</main>
 <%- include('../partials/footer') %>

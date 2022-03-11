@@ -1,6 +1,6 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
 <link rel="stylesheet" href="/stylesheets/reviews/new.css">
+<%- include('../partials/nav') %>
 
 <main class="content-push">
 	<h1>Add Review</h1>
@@ -26,9 +26,10 @@
       <option value="10" selected>10</option>
     </select>
     <label for="content-textarea">Review:</label>
-    <textarea name="content" id="content-textarea"></textarea>
+    <textarea maxlength="300" name="content" id="content-textarea"></textarea>
       <button type="submit">Submit Review</button>
     </form>
   <% } %>
-  
+
+</main>  
 <%- include('../partials/footer') %>

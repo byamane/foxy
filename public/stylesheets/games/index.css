@@ -12,7 +12,7 @@ h2 {
   width: 160px;
   height: 50px;
   border-radius: 50px;
-  background-color: rgb(114, 114, 114);
+  background-color: rgb(92, 92, 92);
   color: white;
   font-weight: 600;
   margin: 0 auto;
@@ -46,7 +46,7 @@ h2 {
 .card-base {
   width: 200px;
   height: 300px;
-  background-color: var(--log-in-hover-bg-color);
+  background-color: rgb(250, 160, 57);
   margin: 30px;
   border-radius: 40px;
   box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
@@ -72,10 +72,11 @@ h2 {
   height: 120px;
   border-radius: 40px;
   padding: 15px 35px;
-  font-size: 1.2rem;
+  font-size: 20px;
+  margin-top: 10px;
   font-weight: 600;
   color:black;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .game-bg {
