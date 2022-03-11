@@ -3,14 +3,15 @@
 <%- include('../partials/nav') %>
 
 <main class="content-push">
+  <h1><%= game.name %></h1>
 
   <section id="user-options">
     <% if (game.addedBy.equals(user?.profile._id)) { %>
       <form action="/games/<%= game._id %>/edit" method="GET">
-        <button class="btn" type="submit">Edit <%= game.name %></button>
+        <button class="btn" type="submit">Edit Game</button>
       </form>
       <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
-        <button class="btn" type="submit">Delete <%= game.name %> </button>
+        <button class="btn" type="submit">Delete Game</button>
       </form>
     <% } %>
     <% if (user) { %>
@@ -36,22 +37,19 @@
             <h3>All Reviews</h3>
             <% game.reviews.forEach(review => { %>
               <% total += review.rating %> 
-              <div id="">
-                <div><p id="review-body"><%= review.content %></p></div>
-                <div><%= review.addedBy.name %> - <%= review.rating %>/10
+                <div><p id="review-body">"<%= review.content %>"</p></div>
+                <div><strong><%= review.addedBy.name %> - <%= review.rating %>/10</strong>
                 <br>
                 <%= review.createdAt.toLocaleDateString() %></div>
-                <br>
-              </div>
                 
                 <% if (review.addedBy.equals(user?.profile._id)) { %>
                   <form action="/games/<%= game._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
-                    <button type="submit">Delete Review</button>
+                    <button class="btn" id="delete-review" type="submit">Delete Review</button>
                   </form>
                 <% } %>
                   
             <% }) %>
-                  <strong id="avgReview">Average Review Score: <%= (total / game.reviews.length).toFixed(1) %></strong>
+                  <h3 id="avg-review">Average Review Score: <%= (total / game.reviews.length).toFixed(1) %></h3>
       <% } else { %>
         <h3>No Reviews Yet</h3>
       <% } %> 

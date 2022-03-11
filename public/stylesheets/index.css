@@ -42,6 +42,7 @@ h5{
   color: var(--log-in-color);
   border-radius: 3px;
   font-weight: 800;
+  text-align: center;
 }
 
 #log-in:hover {
@@ -60,6 +61,7 @@ h5{
   color: var(--log-out-color);
   border-radius: 3px;
   font-weight: 800;
+  text-align: center;
 }
 
 #log-out:hover {
