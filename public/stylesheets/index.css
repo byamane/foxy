@@ -1,6 +1,6 @@
 section {
   width: 600px;
-  height: 550px;
+  height: auto;
   background-color: rgb(251, 250, 245);
   border: 2px solid black;
   text-align: center;
@@ -9,6 +9,10 @@ section {
 
 h2 {
   font-size: 4rem;
+}
+
+h5{
+  margin-bottom: 10px;
 }
 
 #heading {
@@ -21,7 +25,7 @@ h2 {
   height: 10rem;
   width: 10rem;
   margin-left: 20px;
-  margin-top: 80px;
+  margin-top: 90px;
 }
 
 #intro-body{
@@ -67,7 +71,6 @@ h2 {
 @media only screen and (max-width: 768px){
   section {
     width: 80vw;
-    height: 400px;
     margin-top: -10px;
     background-color: var(--section-bg-color);
     border: 2px solid black;
@@ -88,7 +91,7 @@ h2 {
   #fox-heading {
     height: 100px;
     margin-left: 10px;
-    margin-top: 70px;
+    margin-top: 80px;
   }
 
   #intro-body{

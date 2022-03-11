@@ -6,7 +6,7 @@ section {
 h2 {
   font-size: 4rem; 
 }
- 
+
 .btn-base{
   display: flex;
   width: 160px;
@@ -76,7 +76,6 @@ h2 {
   margin-top: 10px;
   font-weight: 600;
   color:black;
-  /* font-style: italic; */
 }
 
 .game-bg {
