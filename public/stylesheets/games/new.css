@@ -1,11 +1,14 @@
 form {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 section {
-  width: 30vw;
-  height: 40vh;
-  background-color: var(--section-bg-color);
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--soft-white);
   border: 2px solid black;
   text-align: center;
   padding: 0 20px 10px 20px;
@@ -17,7 +20,7 @@ input {
 }
 
 label {
-  font-size: 4rem;
+  font-size: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +29,7 @@ label {
 #add-game {
   height: 60px;
   width: 150px;
-  margin-top: 10px;
+  margin: 10px 0;
   font-family: "Fredoka", sans-serif;
   font-size: 22px;
   background-color: var(--log-in-bg-color);
@@ -54,13 +57,7 @@ label {
 
 
   section {
-    width: 80vw;
-    height: 400px;
-    background-color: var(--section-bg-color);
-    border: 2px solid black;
-    text-align: center;
-    padding: 0 20px 10px 20px;
-    font-size: 14px;
+    font-size: 18px;
   }
 
   form {
@@ -97,12 +94,6 @@ label {
 
 
   section {
-    width: 85vw;
-    height: 400px;
-    background-color: var(--section-bg-color);
-    border: 2px solid black;
-    text-align: center;
-    padding: 0 20px 10px 20px;
     font-size: 14px;
   }
 

@@ -2,39 +2,38 @@
 <link rel="stylesheet" href="/stylesheets/games/edit.css">
 <%- include('../partials/nav') %>
 
-<section class="content-push">
+<main class="content-push">
   <h1>Edit <%= game.name %></h1>
-  <% if (user && game.addedBy.equals(user?.profile._id)) { %>
-    <form action="/games/<%= game._id %>?_method=PUT" method="POST">
-      <label>Name:
-        <input type="text" name="name" value="<%= game.name %>" autocomplete="off">
-      </label><br><br>
-      <label>Genre:
-        <input type="text" name="genre" value="<%= game.genre %>" autocomplete="off">
-      </label><br><br>
-      <label>ESRB Rating:
-        <select id="esrbSelect" name="esrbRating">
-          <option value="E">E</option>
-          <option value="E10">E10</option>
-          <option value="T">T</option>
-          <option value="M">M</option>
-          <option value="AO">AO</option>
-          <option value="RP">RP</option>
-        </select>
-      </label><br><br>
-      <label>Release Year:
-        <input type="text" name="releaseYear" value="<%= game.releaseYear %>" autocomplete="off">
-      </label><br><br>
-      <label>Cover Image (.jpg/.png):
-        <input type="text" name="coverImage" value="<%= game.coverImage %>" autocomplete="off">
-      </label><br><br>
-      <button type="submit" id="add-game">Add Game</button>
-    </form>
-  <% } %>
-</section>
+  <section>
 
-
-
-
+    <% if (user && game.addedBy.equals(user?.profile._id)) { %>
+      <form action="/games/<%= game._id %>?_method=PUT" method="POST">
+        <label>Name:
+          <input type="text" name="name" value="<%= game.name %>" autocomplete="off">
+        </label><br><br>
+        <label>Genre:
+          <input type="text" name="genre" value="<%= game.genre %>" autocomplete="off">
+        </label><br><br>
+        <label>ESRB Rating:
+          <select id="esrbSelect" name="esrbRating">
+            <option value="E">E</option>
+            <option value="E10">E10</option>
+            <option value="T">T</option>
+            <option value="M">M</option>
+            <option value="AO">AO</option>
+            <option value="RP">RP</option>
+          </select>
+        </label><br><br>
+        <label>Release Year:
+          <input type="text" name="releaseYear" value="<%= game.releaseYear %>" autocomplete="off">
+        </label><br><br>
+        <label>Cover Image (.jpg/.png):
+          <input type="text" name="coverImage" value="<%= game.coverImage %>" autocomplete="off">
+        </label><br><br>
+        <button type="submit" id="add-game">Add Game</button>
+      </form>
+    <% } %>
+  </section>
+</main>
 
 <%- include('../partials/footer') %>
