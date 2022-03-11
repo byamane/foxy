@@ -26,7 +26,7 @@ label {
   align-items: center;
 }
 
-#add-game {
+#edit-game {
   height: 60px;
   width: 150px;
   margin: 10px 0;
@@ -38,7 +38,7 @@ label {
   font-weight: 800;
 }
 
-#add-game:hover {
+#edit-game:hover {
   background-color: var(--log-in-hover-bg-color);
   color: var(--log-in-hover-color);
   cursor: pointer;
@@ -74,7 +74,7 @@ label {
     margin-top: -10px;
   }
 
-  #add-game {
+  #edit-game {
     height: 40px;
     width: 100px;
     font-size: 14px;
@@ -112,7 +112,7 @@ label {
     margin-top: -10px;
   }
 
-  #add-game {
+  #edit-game {
     height: 40px;
     width: 100px;
     font-size: 14px;
